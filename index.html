@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090612">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vice City">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>VICE CITY MOBILE</title>
+<style>
+:root{color-scheme:dark;--pink:#ff4fa3;--cyan:#39e5ff;--bg:#090612}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#40134c 0%,#170e2c 38%,var(--bg) 78%);color:#fff;font-family:system-ui,-apple-system,sans-serif;min-height:100vh}
+header{padding:calc(18px + env(safe-area-inset-top)) 20px 12px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:950;letter-spacing:3px;font-size:15px}.dot{color:var(--pink)}
+.pill{border:1px solid #ffffff40;border-radius:30px;padding:7px 11px;font-size:10px;letter-spacing:1px;color:#ddd}
+.hero{min-height:340px;padding:55px 22px 30px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.sun{position:absolute;width:210px;height:210px;border-radius:50%;background:linear-gradient(#ffb45c,#ff4f9c 65%,#a82c91);right:-18px;top:28px;box-shadow:0 0 80px #ff4fa355}
+.sun:after{content:"";position:absolute;inset:58% 0 0;background:repeating-linear-gradient(to bottom,transparent 0 9px,#32103b 10px 14px)}
+.palms{position:absolute;right:16px;top:40px;font-size:85px;filter:drop-shadow(0 5px 8px #090612)}
+.kicker{z-index:1;color:var(--cyan);font-size:11px;letter-spacing:4px;font-weight:800}
+h1{z-index:1;margin:8px 0 5px;font-size:clamp(42px,12vw,66px);line-height:.9;letter-spacing:-3px;text-shadow:3px 4px 0 #9a287e}
+.subtitle{z-index:1;color:#e5cfe6;font-size:13px;max-width:260px;line-height:1.5}
+main{padding:10px 18px 40px}.section-title{font-size:11px;letter-spacing:3px;color:#c8a9d4;margin:22px 2px 12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.tile{background:linear-gradient(145deg,#241632,#120e20);border:1px solid #ffffff20;border-radius:17px;padding:17px 14px;min-height:112px;text-align:left;color:white}
+.tile:active,.nav button:active{transform:scale(.98)}.emoji{font-size:24px}.tile b{display:block;margin-top:10px;font-size:14px}.tile small{display:block;color:#bdaec7;margin-top:4px;font-size:11px}
+.feature{border:1px solid #ff4fa355;background:linear-gradient(110deg,#321331,#151020);border-radius:17px;padding:17px;margin-top:12px}
+.feature strong{color:#ff8ac4;font-size:12px;letter-spacing:2px}.feature p{font-size:13px;line-height:1.5;color:#ddd}
+.nav{position:sticky;bottom:0;display:flex;justify-content:space-around;padding:11px 6px calc(11px + env(safe-area-inset-bottom));background:#0c0815ed;border-top:1px solid #ffffff20;backdrop-filter:blur(14px)}
+.nav button{border:0;background:none;color:#c8b8d1;font-size:11px;padding:7px}.nav button.active{color:var(--pink)}
+.panel{display:none}.panel.active{display:block}
+.listitem{padding:15px;border-bottom:1px solid #ffffff18;color:#eee;font-size:14px}.listitem span{color:var(--cyan);float:right}
+footer{text-align:center;color:#8c7c98;font-size:10px;padding:20px;letter-spacing:1px}
+button{cursor:pointer}
+</style>
+</head>
+<body>
+<header><div class="brand">VICE CITY<span class="dot">.</span></div><div class="pill">FAN CONCEPT · NON OFFICIEL</div></header>
+<section class="hero">
+<div class="sun"></div><div class="palms">🌴</div>
+<div class="kicker">WELCOME TO THE CITY</div>
+<h1>VICE<br>CITY</h1>
+<div class="subtitle">Une expérience fan inspirée de l'ambiance néon de la côte.</div>
+</section>
+<main>
+<section id="home" class="panel active">
+<div class="section-title">EXPLORER</div>
+<div class="grid">
+<button class="tile" onclick="show('characters')"><span class="emoji">👥</span><b>Personnages</b><small>Fiches & profils fan</small></button>
+<button class="tile" onclick="show('map')"><span class="emoji">🗺️</span><b>Carte fan</b><small>Zones imaginaires</small></button>
+<button class="tile" onclick="show('gallery')"><span class="emoji">🌇</span><b>Galerie</b><small>Ambiance & inspirations</small></button>
+<button class="tile" onclick="show('news')"><span class="emoji">📰</span><b>Actualités</b><small>Liens officiels</small></button>
+</div>
+<div class="feature"><strong>VICE CITY FILES</strong><p>Bienvenue dans ton tableau de bord. Cette première version est une interface fan originale : elle ne contient aucun jeu, contenu extrait ni service officiel de Rockstar Games.</p></div>
+</section>
+<section id="characters" class="panel"><div class="section-title">PERSONNAGES · ESPACE FAN</div><div class="listitem">Lucia — fiche fan <span>›</span></div><div class="listitem">Jason — fiche fan <span>›</span></div><div class="feature"><p>Les descriptions détaillées et visuels officiels ne sont pas intégrés dans ce prototype.</p></div></section>
+<section id="map" class="panel"><div class="section-title">CARTE FAN</div><div class="feature"><strong>ZONE 01 · OCEAN DRIVE</strong><p>Quartier côtier fictif — néons, plage et avenues nocturnes.</p></div><div class="feature"><strong>ZONE 02 · DOWNTOWN</strong><p>Centre urbain fictif — gratte-ciel et circulation.</p></div><div class="feature"><strong>ZONE 03 · MARINA</strong><p>Port fictif — bateaux et couchers de soleil.</p></div></section>
+<section id="gallery" class="panel"><div class="section-title">GALERIE D'AMBIANCE</div><div class="feature"><strong>NEON / SUNSET / PALMS</strong><p>Direction artistique originale : dégradés rose et violet, cyan lumineux, silhouettes de palmiers et ambiance rétro-futuriste.</p></div></section>
+<section id="news" class="panel"><div class="section-title">ACTUALITÉS</div><div class="listitem">Site officiel Rockstar Games <span>↗</span></div><div class="listitem">Actualités à consulter sur le site officiel <span>↗</span></div></section>
+<section id="settings" class="panel"><div class="section-title">PARAMÈTRES</div><div class="listitem">Version <span>0.1.0</span></div><div class="listitem">Thème <span>Néon sombre</span></div><div class="listitem">Statut <span>Prototype fan</span></div></section>
+</main>
+<nav class="nav">
+<button class="active" onclick="show('home',this)">⌂<br>Accueil</button>
+<button onclick="show('characters',this)">♙<br>Persos</button>
+<button onclick="show('map',this)">⌖<br>Carte</button>
+<button onclick="show('news',this)">▤<br>News</button>
+<button onclick="show('settings',this)">⚙<br>Réglages</button>
+</nav>
+<footer>VICE CITY MOBILE · FAN-MADE · NOT AFFILIATED WITH ROCKSTAR GAMES</footer>
+<script>
+function show(id,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');else{const map={home:0,characters:1,map:2,news:3,settings:4};document.querySelectorAll('.nav button')[map[id]??0].classList.add('active')}window.scrollTo({top:0,behavior:'smooth'})}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+</script>
+</body></html>
